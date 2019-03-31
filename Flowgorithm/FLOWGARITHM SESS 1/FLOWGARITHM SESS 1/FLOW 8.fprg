@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 10:52:31 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDo0NjowNSBBTTsgMjUwOQ=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDo1MjozMSBBTTsgMjUwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1" type="Integer" array="False" size="" variables="N1"/>
+            <declare name="N2" type="Integer" array="False" size="" variables="N2"/>
+            <declare name="N3" type="Integer" array="False" size="" variables="N3"/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <input variable="N3"/>
+            <if expression="((N1&lt;N2) &amp;&amp; (N1&lt;N3))">
+                <then>
+                    <output expression="N1"/>
+                </then>
+                <else>
+                    <if expression="((N2&lt;N1) &amp;&amp; (N2&lt;N3))">
+                        <then>
+                            <output expression="N2"/>
+                        </then>
+                        <else>
+                            <output expression="N3"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

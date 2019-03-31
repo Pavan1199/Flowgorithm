@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-16 06:05:47 PM"/>
+        <attribute name="created" value="VTRFQ0UxNzE1ODsgMTBDUFUwMDE1OyAyMDE3LTA4LTE0OyAwMjozMjowNSBQTTsgMjUwNg=="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE2OyAwNjowNTo0NyBQTTsgNDAzMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <assign variable="A" expression="0"/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <assign variable="C" expression="1"/>
+            <declare name="P" type="Integer" array="False" size=""/>
+            <assign variable="P" expression="1"/>
+            <if expression="n&gt;9">
+                <then>
+                    <output expression="&quot;SUM OR MULTIPLY THE DIGITS&quot;"/>
+                    <declare name="S" type="String" array="False" size=""/>
+                    <input variable="S"/>
+                    <if expression="S=&quot;SUM&quot;">
+                        <then>
+                            <while expression="n&gt;0">
+                                <assign variable="C" expression="n%10"/>
+                                <assign variable="A" expression="A+C"/>
+                                <assign variable="n" expression="n/10"/>
+                            </while>
+                            <output expression="&quot;THE SUM IS&quot;&amp;&quot; &quot;&amp;A"/>
+                        </then>
+                        <else>
+                            <while expression="n&gt;0">
+                                <assign variable="C" expression="n%10"/>
+                                <assign variable="P" expression="P*C"/>
+                                <assign variable="n" expression="n/10"/>
+                            </while>
+                            <output expression="&quot;THE PRODUCT IS&quot;&amp;&quot; &quot;&amp;P"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;ENTER A VALID NUMBER&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

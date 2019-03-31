@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Naren Anand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-01 07:45:11 PM"/>
+        <attribute name="created" value="TmFyZW4gQW5hbmQ7IExBUFRPUC1KMFVGVlAzVjsgMjAxNy0xMC0wMTsgMDU6Mzc6MzAgUE07IDM0NzM="/>
+        <attribute name="edited" value="TmFyZW4gQW5hbmQ7IExBUFRPUC1KMFVGVlAzVjsgMjAxNy0xMC0wMTsgMDc6NDU6MTEgUE07IDM0NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array &quot;"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="0"/>
+            <declare name="s1" type="Integer" array="False" size=""/>
+            <assign variable="s1" expression="0"/>
+            <declare name="s2" type="Integer" array="False" size=""/>
+            <assign variable="s2" expression="0"/>
+            <declare name="s3" type="Integer" array="False" size=""/>
+            <assign variable="s3" expression="0"/>
+            <output expression="&quot;Enter the rating in array &quot;"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <assign variable="t" expression="1"/>
+                <if expression="a[i]&lt;a[i+1]">
+                    <then>
+                        <assign variable="t" expression="t+1"/>
+                        <assign variable="s1" expression="s1+t"/>
+                    </then>
+                    <else>
+                        <if expression="a[i]&gt;a[i+1]">
+                            <then>
+                                <assign variable="t" expression="1"/>
+                                <assign variable="s2" expression="s2+t"/>
+                            </then>
+                            <else>
+                                <if expression="a[i]==a[i+1]">
+                                    <then>
+                                        <assign variable="t" expression="1"/>
+                                        <assign variable="s3" expression="s3+t"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="s1" expression="s1+1"/>
+            <assign variable="s" expression="s1+s2+s3"/>
+            <output expression="&quot;The cost of all books is &quot;&amp;s"/>
+        </body>
+    </function>
+</flowgorithm>

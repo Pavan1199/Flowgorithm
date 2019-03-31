@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 07:11:13 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDY6NTU6MDYgUE07IDI5MzQ="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDc6MTE6MTMgUE07IDI5MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <call expression="lands(a)"/>
+        </body>
+    </function>
+    <function name="lands" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <assign variable="m" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="a[i]&gt;m">
+                    <then>
+                        <assign variable="m" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="s" expression="100"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="a[i]&lt;s">
+                    <then>
+                        <assign variable="s" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;largest number is&quot; &amp; m &amp; &quot;smallest number is&quot; &amp;s"/>
+        </body>
+    </function>
+</flowgorithm>

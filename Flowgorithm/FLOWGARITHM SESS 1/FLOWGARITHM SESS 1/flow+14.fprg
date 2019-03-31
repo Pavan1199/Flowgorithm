@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-10 03:56:43 PM"/>
+        <attribute name="created" value="dTRlY2UxNzAwNzsgMDlDUFUwMTg4OyAyMDE3LTA4LTEwOyAwMzozOTowMyBQTTsgMjY0OA=="/>
+        <attribute name="edited" value="dTRlY2UxNzAwNzsgMDlDUFUwMTg4OyAyMDE3LTA4LTEwOyAwMzo1Njo0MyBQTTsgMjY1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="C" type="Integer" array="False" size="" variables="C"/>
+            <declare name="D" type="Integer" array="False" size="" variables="D"/>
+            <declare name="L" type="Integer" array="False" size="" variables="L"/>
+            <output expression="&quot;NO OF CATS&quot;"/>
+            <input variable="C"/>
+            <output expression="&quot;NO OF DOGS&quot;"/>
+            <input variable="D"/>
+            <output expression="&quot;EXPECTED LEGS&quot;"/>
+            <input variable="L"/>
+            <if expression="L%4==0">
+                <then>
+                    <if expression="D&gt;C">
+                        <then>
+                            <if expression="L&lt;=(D*4)+(C*4)&amp;&amp;L&gt;(D*4)">
+                                <then>
+                                    <output expression="&quot;YES&quot;"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;NO&quot;"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="L&lt;=(D*4)+(C*4)">
+                                <then>
+                                    <output expression="&quot;YES&quot;"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;NO&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;INVALID ENTRY&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

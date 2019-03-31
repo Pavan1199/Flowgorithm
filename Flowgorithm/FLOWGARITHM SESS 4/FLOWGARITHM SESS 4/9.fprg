@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 04:24:10 PM"/>
+        <attribute name="created" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA5LTIxOyAwNDo0MTozNyBQTTsgNDAyNA=="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDQ6MjQ6MTAgUE07IDI5MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <output expression="&quot;ENTER AN ARRAY&quot;"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <for variable="j" start="0" end="3-i" direction="inc" step="1">
+                    <if expression="a[j]&gt;a[j+1]">
+                        <then>
+                            <assign variable="t" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Heights are in ascending order&quot;"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="a[i]"/>
+            </for>
+            <assign variable="s" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="s" expression="s+a[i]"/>
+            </for>
+            <assign variable="avg" expression="s/5"/>
+            <output expression="&quot;Average of the heights=&quot;&amp;avg"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 08:52:22 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDg6NDU6MDggUE07IDI5Mzc="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDg6NTI6MjIgUE07IDI5MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <call expression="reverse(n)"/>
+        </body>
+    </function>
+    <function name="reverse" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="0"/>
+            <if expression="n&gt;9">
+                <then>
+                    <while expression="n&gt;0">
+                        <assign variable="p" expression="n%10"/>
+                        <assign variable="s" expression="s*10+p"/>
+                        <assign variable="n" expression="n/10"/>
+                    </while>
+                    <output expression="s"/>
+                </then>
+                <else>
+                    <output expression="&quot;Enter a number greater than 9&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

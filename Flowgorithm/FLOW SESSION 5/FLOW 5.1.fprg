@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Pavan Vadde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-02 04:37:19 PM"/>
+        <attribute name="created" value="dGFudHI7IExBUFRPUC1GNEdHMUgzQjsgMjAxNy0wOS0yNjsgMDY6NTg6MzggUE07IDI5NjE="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMjsgMDQ6Mzc6MTkgUE07IDI5MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;ENTER 10 PRICES&quot;"/>
+            <declare name="x" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="x[i]"/>
+            </for>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="8" direction="inc" step="1">
+                <for variable="j" start="i+1" end="9" direction="inc" step="1">
+                    <if expression="x[j]&lt;x[i]">
+                        <then>
+                            <assign variable="t" expression="x[j]"/>
+                            <assign variable="x[j]" expression="x[i]"/>
+                            <assign variable="x[i]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;THE LEAST PRICE OF ITEM IS&quot;&amp;&quot; &quot;&amp;x[0]"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <declare name="avg" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="sum" expression="sum+x[i]"/>
+            </for>
+            <assign variable="avg" expression="sum/10"/>
+            <output expression="&quot;THE AVERAGE PRICE IS&quot;&amp;&quot; &quot;&amp;avg"/>
+        </body>
+    </function>
+</flowgorithm>

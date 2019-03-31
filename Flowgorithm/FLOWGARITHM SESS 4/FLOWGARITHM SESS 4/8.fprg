@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-26 03:41:56 PM"/>
+        <attribute name="created" value="dGFudHI7IExBUFRPUC1GNEdHMUgzQjsgMjAxNy0wOS0yNDsgMDg6MTY6MDIgUE07IDI5NDY="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDU5OyAyMDE3LTA5LTI2OyAwMzo0MTo1NiBQTTsgMjY1OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="True" size="10" variables="x[10]"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="n" type="Integer" array="False" size="" variables="n"/>
+            <assign variable="n" expression="10"/>
+            <declare name="j" type="Integer" array="False" size="" variables="j"/>
+            <output expression="&quot;ENTER 10 NUMBERS&quot;"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="x[i]"/>
+            </for>
+            <declare name="minind" type="Integer" array="False" size="" variables="minind"/>
+            <declare name="t" type="Integer" array="False" size="" variables="t"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="minind" expression="i"/>
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="x[j]&lt;x[minind]">
+                        <then>
+                            <assign variable="minind" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="t" expression="x[minind]"/>
+                    <assign variable="x[minind]" expression="x[i]"/>
+                    <assign variable="x[i]" expression="t"/>
+                </for>
+            </for>
+            <declare name="a" type="Integer" array="True" size="10" variables="a[10]"/>
+            <declare name="p" type="Integer" array="False" size="" variables="p"/>
+            <assign variable="p" expression="9"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="a[i]" expression="x[p]"/>
+                <assign variable="p" expression="p-1"/>
+            </for>
+            <for variable="j" start="0" end="9" direction="inc" step="1">
+                <output expression="a[j]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

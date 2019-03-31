@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-11 11:45:26 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMTozNDoxMiBBTTsgMjYyOQ=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMTo0NToyNiBBTTsgMjYzNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="Integer" array="False" size="" variables="s"/>
+            <declare name="c" type="String" array="False" size="" variables="c"/>
+            <declare name="p" type="Integer" array="False" size="" variables="p"/>
+            <declare name="x" type="Real" array="False" size="" variables="x"/>
+            <declare name="d" type="Real" array="False" size="" variables="d"/>
+            <declare name="ECONOMY" type="String" array="False" size="" variables="ECONOMY"/>
+            <declare name="BUSINESS" type="String" array="False" size="" variables="BUSINESS"/>
+            <declare name="FIRSTCLASS" type="String" array="False" size="" variables="FIRSTCLASS"/>
+            <output expression="&quot;Enter seat no&quot;"/>
+            <input variable="s"/>
+            <output expression="&quot;Enter class&quot;"/>
+            <input variable="c"/>
+            <output expression="&quot;Enter price&quot;"/>
+            <input variable="p"/>
+            <if expression="C=&quot;ECONOMY&quot;">
+                <then>
+                    <assign variable="d" expression="0.1"/>
+                    <assign variable="x" expression="p*d"/>
+                    <output expression="&quot;AMOUNT SAVED =&quot; &amp; x"/>
+                </then>
+                <else>
+                    <if expression="C=&quot;FIRSTCLASS&quot;">
+                        <then>
+                            <assign variable="d" expression="0.15"/>
+                            <assign variable="x" expression="p*d"/>
+                            <output expression="&quot;AMOUNT SAVED =&quot; &amp; x"/>
+                        </then>
+                        <else>
+                            <assign variable="d" expression="0.2"/>
+                            <assign variable="x" expression="p*d"/>
+                            <output expression="&quot;AMOUNT SAVED =&quot; &amp; x"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

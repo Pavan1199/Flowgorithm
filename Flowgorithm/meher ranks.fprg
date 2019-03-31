@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 04:34:22 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDQ6MjQ6NDMgUE07IDI5Mjk="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDQ6MzQ6MjIgUE07IDI5Mjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="cnt" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="x" expression="a[i]"/>
+                <assign variable="cnt" expression="10"/>
+                <for variable="j" start="0" end="9" direction="inc" step="1">
+                    <if expression="x&gt;a[j]">
+                        <then>
+                            <assign variable="cnt" expression="cnt-1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot;rank of &quot;&amp;x&amp;&quot; = &quot;&amp;cnt"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

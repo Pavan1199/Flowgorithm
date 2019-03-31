@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Naren Anand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-01 07:17:31 PM"/>
+        <attribute name="created" value="TmFyZW4gQW5hbmQ7IExBUFRPUC1KMFVGVlAzVjsgMjAxNy0xMC0wMTsgMTE6MjA6MDUgQU07IDM0NDk="/>
+        <attribute name="edited" value="TmFyZW4gQW5hbmQ7IExBUFRPUC1KMFVGVlAzVjsgMjAxNy0xMC0wMTsgMDc6MTc6MzEgUE07IDM0NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="0"/>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <assign variable="p" expression="0"/>
+            <output expression="&quot;Enter the times to test &quot;"/>
+            <input variable="k"/>
+            <for variable="p" start="1" end="k" direction="inc" step="1">
+                <declare name="n" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter the no. of the numbers &quot;"/>
+                <input variable="n"/>
+                <declare name="a" type="Integer" array="True" size="n+1"/>
+                <output expression="&quot;Enter the elements in array &quot;"/>
+                <for variable="i" start="0" end="n" direction="inc" step="1">
+                    <input variable="a[i]"/>
+                </for>
+                <for variable="i" start="0" end="n" direction="inc" step="1">
+                    <if expression="n==a[i]">
+                        <then>
+                            <assign variable="a[i]" expression="0"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <for variable="i" start="0" end="n" direction="inc" step="1">
+                    <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                        <if expression="a[j]&gt;a[j+1]">
+                            <then>
+                                <assign variable="t" expression="a[j]"/>
+                                <assign variable="a[j]" expression="a[j+1]"/>
+                                <assign variable="a[j+1]" expression="t"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </for>
+                <output expression="&quot;The largest element is &quot;&amp;a[n]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

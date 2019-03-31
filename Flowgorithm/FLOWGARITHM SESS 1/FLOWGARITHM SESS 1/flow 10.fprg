@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 11:57:45 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMTo0Nzo0MiBBTTsgMjUxMg=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMTo1Nzo0NSBBTTsgMjUxNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CHOICE" type="Integer" array="False" size="" variables="CHOICE"/>
+            <declare name="S" type="Integer" array="False" size="" variables="S"/>
+            <declare name="C" type="Integer" array="False" size="" variables="C"/>
+            <declare name="N1" type="Integer" array="False" size="" variables="N1"/>
+            <input variable="CHOICE"/>
+            <input variable="N1"/>
+            <if expression="CHOICE==1">
+                <then>
+                    <assign variable="S" expression="N1*N1"/>
+                    <output expression="S"/>
+                </then>
+                <else>
+                    <assign variable="C" expression="N1*N1*N1"/>
+                    <output expression="C"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

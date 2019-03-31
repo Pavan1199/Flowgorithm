@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-21 10:03:43 AM"/>
+        <attribute name="created" value="Q09BU1RBTDsgQ09BU1RBTC1QQzsgMjAxNy0wOS0xNzsgMDI6NDM6MDcgUE07IDI2MTM="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA5LTIxOyAxMDowMzo0MyBBTTsgNDAwMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the array&quot;"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;a[&quot;&amp;i&amp;&quot;]=&quot;&amp; a[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

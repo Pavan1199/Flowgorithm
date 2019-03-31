@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 09:14:41 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDg6NTM6MzkgUE07IDI5NDA="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDk6MTQ6NDEgUE07IDI5MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="ch" type="Integer" array="False" size=""/>
+            <output expression="&quot;1-sum of the digits of the number&quot;"/>
+            <output expression="&quot;2-reverse of the number&quot;"/>
+            <output expression="&quot;3-even or odd&quot;"/>
+            <output expression="&quot;4-sum of two numbers&quot;"/>
+            <input variable="ch"/>
+            <if expression="ch==1">
+                <then>
+                    <input variable="n"/>
+                    <call expression="sofdigits(n)"/>
+                </then>
+                <else>
+                    <if expression="ch==2">
+                        <then>
+                            <input variable="n"/>
+                            <call expression="reverse(n)"/>
+                        </then>
+                        <else>
+                            <if expression="ch==3">
+                                <then>
+                                    <input variable="n"/>
+                                    <call expression="evenorodd(n)"/>
+                                </then>
+                                <else>
+                                    <if expression="ch==4">
+                                        <then>
+                                            <output expression="&quot;Enter a&quot;"/>
+                                            <input variable="a"/>
+                                            <output expression="&quot;Enter b&quot;"/>
+                                            <input variable="b"/>
+                                            <call expression="sofnumbers(a,b)"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Enter a valid choice&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="evenorodd" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="n%2==0">
+                <then>
+                    <output expression="&quot;even&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;odd&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="reverse" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="0"/>
+            <if expression="n&gt;9">
+                <then>
+                    <while expression="n&gt;0">
+                        <assign variable="p" expression="n%10"/>
+                        <assign variable="s" expression="s*10+p"/>
+                        <assign variable="n" expression="n/10"/>
+                    </while>
+                    <output expression="s"/>
+                </then>
+                <else>
+                    <output expression="&quot;Enter a number greater than 9&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="sofdigits" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="0"/>
+            <if expression="n&gt;9">
+                <then>
+                    <while expression="n&gt;0">
+                        <assign variable="p" expression="n%10"/>
+                        <assign variable="s" expression="s+p"/>
+                        <assign variable="n" expression="n/10"/>
+                    </while>
+                    <output expression="s"/>
+                </then>
+                <else>
+                    <output expression="&quot;Enter a valid number&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="sofnumbers" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <assign variable="p" expression="x+y"/>
+            <output expression="p"/>
+        </body>
+    </function>
+</flowgorithm>

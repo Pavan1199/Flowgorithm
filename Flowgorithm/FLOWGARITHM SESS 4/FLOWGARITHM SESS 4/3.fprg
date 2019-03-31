@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-26 03:19:45 PM"/>
+        <attribute name="created" value="Q09BU1RBTDsgQ09BU1RBTC1QQzsgMjAxNy0wOS0xNzsgMDM6MTc6MzEgUE07IDI2MTI="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDU5OyAyMDE3LTA5LTI2OyAwMzoxOTo0NSBQTTsgMjY2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="10" variables="a[10]"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="s" type="Integer" array="False" size="" variables="s"/>
+            <declare name="j" type="Integer" array="False" size="" variables="j"/>
+            <declare name="p" type="Integer" array="False" size="" variables="p"/>
+            <output expression="&quot;Enter the array&quot;"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <assign variable="s" expression="0"/>
+            <assign variable="p" expression="1"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="s" expression="s+a[i]"/>
+                <assign variable="p" expression="p*a[i]"/>
+            </for>
+            <output expression="&quot;Sum of the array elements=&quot; &amp; s"/>
+            <output expression="&quot;Product of the array elements=&quot; &amp;p"/>
+        </body>
+    </function>
+</flowgorithm>

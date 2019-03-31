@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-16 06:10:42 PM"/>
+        <attribute name="created" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE1OyAxMTo0MDo1MSBBTTsgNDAwNA=="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE2OyAwNjoxMDo0MiBQTTsgNDAyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <assign variable="A" expression="n"/>
+            <assign variable="x" expression="0"/>
+            <assign variable="s" expression="0"/>
+            <while expression="A&gt;0">
+                <assign variable="x" expression="A%10"/>
+                <assign variable="s" expression="s+(x^3)"/>
+                <assign variable="A" expression="A/10"/>
+            </while>
+            <if expression="n=s">
+                <then>
+                    <output expression="&quot;THE GIVEN NUMBER IS ARMSTRONG&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;THE GIVEN NUMBER IS NOT ARMSTRONG&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

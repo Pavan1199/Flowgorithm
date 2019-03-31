@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-25 11:22:25 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTI1OyAxMToxMzowMiBBTTsgMjYzMA=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTI1OyAxMToyMjoyNSBBTTsgMjYzNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="j" type="Integer" array="False" size="" variables="j"/>
+            <declare name="a" type="Integer" array="True" size="10" variables="a[10]"/>
+            <declare name="t" type="Integer" array="False" size="" variables="t"/>
+            <declare name="l1" type="Integer" array="False" size="" variables="l1"/>
+            <declare name="l2" type="Integer" array="False" size="" variables="l2"/>
+            <declare name="b1" type="Integer" array="False" size="" variables="b1"/>
+            <declare name="b2" type="Integer" array="False" size="" variables="b2"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="8" direction="inc" step="1">
+                <for variable="j" start="0" end="8-i" direction="inc" step="1">
+                    <if expression="a[j]&gt;a[j+1]">
+                        <then>
+                            <assign variable="t" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="l1" expression="a[9]"/>
+            <assign variable="l2" expression="a[8]"/>
+            <assign variable="b1" expression="a[7]"/>
+            <assign variable="b2" expression="a[6]"/>
+            <if expression="l1=l2&amp;&amp;b1=b2">
+                <then>
+                    <assign variable="A" expression="l1*b1"/>
+                    <output expression="&quot;Area of the rectangle=&quot;&amp; A"/>
+                </then>
+                <else>
+                    <output expression="&quot;Rectangle not possible&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

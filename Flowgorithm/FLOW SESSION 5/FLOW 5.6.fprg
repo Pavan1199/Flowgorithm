@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Pavan Vadde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-02 04:38:19 PM"/>
+        <attribute name="created" value="dGFudHI7IExBUFRPUC1GNEdHMUgzQjsgMjAxNy0xMC0wMjsgMTE6MzM6MjQgQU07IDI5MTY="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMjsgMDQ6Mzg6MTkgUE07IDI5MzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;ENTER ARRAY LENGTH&quot;"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;PLEASE SELECT 2 NUMBERS FROM THE ARRAY&quot;"/>
+            <declare name="n1" type="Integer" array="False" size=""/>
+            <declare name="n2" type="Integer" array="False" size=""/>
+            <input variable="n1"/>
+            <input variable="n2"/>
+            <output expression="&quot;ENTER ARRAY LENGTH&quot;"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <output expression="&quot;ENTER&quot;&amp;&quot; &quot;&amp;x&amp;&quot; &quot;&amp;&quot;NUMBERS&quot;"/>
+            <declare name="b" type="Integer" array="True" size="x"/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <input variable="b[i]"/>
+            </for>
+            <call expression="check(b,n1,n2,x)"/>
+        </body>
+    </function>
+    <function name="check" type="None" variable="">
+        <parameters>
+            <parameter name="b" type="Integer" array="True"/>
+            <parameter name="q" type="Integer" array="False"/>
+            <parameter name="r" type="Integer" array="False"/>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <if expression="(b[i]&gt;=q)AND(b[i]&lt;=r)">
+                    <then>
+                        <output expression="&quot;YES&quot;"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;NO&quot;"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

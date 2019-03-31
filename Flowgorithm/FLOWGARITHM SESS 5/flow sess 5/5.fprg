@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-01 09:46:56 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMTsgMDc6MzY6MTYgUE07IDI5Mjk="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMTsgMDk6NDY6NTYgUE07IDI5MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of books&quot;"/>
+            <input variable="n"/>
+            <declare name="r" type="Integer" array="True" size="n"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the ratings&quot;"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="r[i]"/>
+            </for>
+            <assign variable="s" expression="1"/>
+            <assign variable="x" expression="1"/>
+            <for variable="i" start="1" end="n-2" direction="inc" step="1">
+                <if expression="r[i]&gt;r[i+1]||r[i]&gt;r[i-1]">
+                    <then>
+                        <assign variable="x" expression="x+1"/>
+                        <assign variable="s" expression="s+x"/>
+                    </then>
+                    <else>
+                        <assign variable="x" expression="1"/>
+                        <assign variable="s" expression="s+x"/>
+                    </else>
+                </if>
+            </for>
+            <if expression="r[n-1]&gt;r[n-2]">
+                <then>
+                    <assign variable="x" expression="x+1"/>
+                    <assign variable="s" expression="s+x"/>
+                </then>
+                <else>
+                    <assign variable="x" expression="1"/>
+                    <assign variable="s" expression="s+x"/>
+                </else>
+            </if>
+            <output expression="&quot;The sum cost of books acc to given rating is &quot;&amp;s"/>
+        </body>
+    </function>
+</flowgorithm>

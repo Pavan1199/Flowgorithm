@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-11 11:53:59 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMDo1NzowMCBBTTsgMjYzMA=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMTo1Mzo1OSBBTTsgMjY0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="Integer" array="False" size="" variables="s"/>
+            <declare name="p" type="Integer" array="False" size="" variables="p"/>
+            <declare name="i" type="Real" array="False" size="" variables="i"/>
+            <declare name="x" type="Real" array="False" size="" variables="x"/>
+            <input variable="s"/>
+            <input variable="p"/>
+            <if expression="p=5">
+                <then>
+                    <assign variable="i" expression="0.15"/>
+                    <assign variable="x" expression="s*i"/>
+                    <output expression="&quot;INCREMENT IN SALARY=&quot; &amp; x"/>
+                </then>
+                <else>
+                    <if expression="p&gt;=3">
+                        <then>
+                            <assign variable="i" expression="0.1"/>
+                            <assign variable="x" expression="s*i"/>
+                            <output expression="&quot;INCREMENT IN SALARY=&quot; &amp; x"/>
+                        </then>
+                        <else>
+                            <if expression="p&gt;=1">
+                                <then>
+                                    <assign variable="i" expression="0.05"/>
+                                    <assign variable="x" expression="s*i"/>
+                                    <output expression="&quot;INCREMENT IN SALARY=&quot; &amp; x"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

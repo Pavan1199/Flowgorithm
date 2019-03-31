@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 04:24:35 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDQ6MTE6MjAgUE07IDI5MjA="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDQ6MjQ6MzUgUE07IDI5MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <for variable="j" start="0" end="3-i" direction="inc" step="1">
+                    <if expression="a[j]&lt;a[j+1]">
+                        <then>
+                            <assign variable="t" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="r" expression="1"/>
+            <output expression="&quot;rank=&quot;&amp; r &amp; a[0]"/>
+            <for variable="i" start="1" end="4" direction="inc" step="1">
+                <if expression="a[i]==a[i-1]">
+                    <then>
+                        <output expression="&quot;rank=&quot; &amp; r &amp; a[i]"/>
+                    </then>
+                    <else>
+                        <assign variable="r" expression="r+1"/>
+                        <output expression="&quot;rank=&quot; &amp; r &amp; a[i]"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

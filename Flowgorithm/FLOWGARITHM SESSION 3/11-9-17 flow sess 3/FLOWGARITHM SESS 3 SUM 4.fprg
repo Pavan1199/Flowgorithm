@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-11 11:24:49 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMTowNDo1OCBBTTsgMjYzNg=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMToyNDo0OSBBTTsgMjYzOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="AUTHOR" type="String" array="False" size="" variables="AUTHOR"/>
+            <declare name="CATEGORY" type="String" array="False" size="" variables="CATEGORY"/>
+            <declare name="JANARDHAN" type="String" array="False" size="" variables="JANARDHAN"/>
+            <declare name="NIVEDITHA" type="String" array="False" size="" variables="NIVEDITHA"/>
+            <declare name="MEERA" type="String" array="False" size="" variables="MEERA"/>
+            <declare name="BANERJEE" type="String" array="False" size="" variables="BANERJEE"/>
+            <declare name="FICTION" type="String" array="False" size="" variables="FICTION"/>
+            <declare name="ACTION" type="String" array="False" size="" variables="ACTION"/>
+            <declare name="HORROR" type="String" array="False" size="" variables="HORROR"/>
+            <declare name="DRAMA" type="String" array="False" size="" variables="DRAMA"/>
+            <input variable="AUTHOR"/>
+            <input variable="CATEGORY"/>
+            <if expression="AUTHOR=&quot;JANARDHAN&quot; &amp;&amp; CATEGORY=&quot;FICTION&quot;">
+                <then>
+                    <output expression="&quot;STARS EARNED BY READER = 5&quot;"/>
+                </then>
+                <else>
+                    <if expression="AUTHOR=&quot;NIVEDITHA&quot; &amp;&amp; CATEGORY=&quot;ACTION&quot;">
+                        <then>
+                            <output expression="&quot;STARS EARNED BY READER = 4&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="AUTHOR=&quot;MEERA&quot; &amp;&amp; CATEGORY=&quot;DRAMA&quot;">
+                                <then>
+                                    <output expression="&quot;STARS EARNED BY READER = 3&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="AUTHOR=&quot;BANERJEE&quot; &amp;&amp; CATEGORY=&quot;HORROR&quot;">
+                                        <then>
+                                            <output expression="&quot;STARS EARNED BY READER = 2&quot;"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

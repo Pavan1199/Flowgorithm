@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-01 10:59:45 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMTsgMDk6NDY6NTkgUE07IDI5Mzk="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMTsgMTA6NTk6NDUgUE07IDI5MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <declare name="Q" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array&quot;"/>
+            <input variable="N"/>
+            <declare name="s" type="Integer" array="True" size="N"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of queries&quot;"/>
+            <input variable="Q"/>
+            <output expression="&quot;Input the array&quot;"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="s[i]"/>
+            </for>
+            <output expression="&quot;Select a from the array&quot;"/>
+            <input variable="a"/>
+            <output expression="&quot;Select b from the array&quot;"/>
+            <input variable="b"/>
+            <declare name="p" type="Integer" array="True" size="Q"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the queries&quot;"/>
+            <for variable="j" start="0" end="Q-1" direction="inc" step="1">
+                <input variable="p[j]"/>
+            </for>
+            <for variable="j" start="0" end="Q-1" direction="inc" step="1">
+                <if expression="p[j]&gt;=a &amp;&amp; p[j]&lt;=b">
+                    <then>
+                        <output expression="&quot;YES&quot;"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;NO&quot;"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

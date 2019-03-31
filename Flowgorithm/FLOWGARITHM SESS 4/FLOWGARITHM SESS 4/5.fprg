@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 10:40:20 PM"/>
+        <attribute name="created" value="TmFyZW4gQW5hbmQ7IExBUFRPUC1KMFVGVlAzVjsgMjAxNy0wOS0yNDsgMTA6MDY6MTQgQU07IDM0NjU="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMTA6NDA6MjAgUE07IDI5MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <declare name="e" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <output expression="&quot;input an array&quot;"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;input a number&quot;"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <for variable="j" start="0" end="3-i" direction="inc" step="1">
+                    <if expression="a[j]&gt;a[j+1]">
+                        <then>
+                            <assign variable="t" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="b" expression="0"/>
+            <assign variable="e" expression="4"/>
+            <assign variable="f" expression="0"/>
+            <while expression="b&lt;=e">
+                <assign variable="m" expression="(b+e)/2"/>
+                <if expression="n&lt;a[m]">
+                    <then>
+                        <assign variable="e" expression="m-1"/>
+                    </then>
+                    <else>
+                        <if expression="n&gt;a[m]">
+                            <then>
+                                <assign variable="b" expression="m+1"/>
+                            </then>
+                            <else>
+                                <assign variable="f" expression="1"/>
+                                <assign variable="b" expression="e+1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="f=1">
+                <then>
+                    <output expression="&quot;found&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;not found&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

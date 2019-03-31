@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Pavan Vadde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-02 04:37:55 PM"/>
+        <attribute name="created" value="dGFudHI7IExBUFRPUC1GNEdHMUgzQjsgMjAxNy0xMC0wMTsgMDY6MzI6NTggUE07IDI5NDA="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMjsgMDQ6Mzc6NTUgUE07IDI5MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;ENTER A NUMBER AS THE LENGTH OF AN ARRAY&quot;"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <output expression="&quot;ENTER&quot;&amp;&quot; &quot;&amp;x&amp;&quot; &quot;&amp;&quot;NUMBERS&quot;"/>
+            <declare name="a" type="Integer" array="True" size="x"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="x-1" direction="inc" step="1">
+                    <if expression="a[i]&gt;a[j]">
+                        <then>
+                            <assign variable="m" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[i]"/>
+                            <assign variable="a[i]" expression="m"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="0"/>
+            <declare name="icount" type="Integer" array="True" size="x"/>
+            <output expression="&quot;THE SORTED ARRAY&quot;"/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <output expression="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <assign variable="icount[i]" expression="0"/>
+            </for>
+            <for variable="i" start="x-1" end="0" direction="dec" step="1">
+                <assign variable="b" expression="0"/>
+                <for variable="j" start="x-1" end="0" direction="dec" step="1">
+                    <if expression="a[i]=a[j]">
+                        <then>
+                            <assign variable="b" expression="b+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="b=2">
+                    <then>
+                        <assign variable="icount[k]" expression="i"/>
+                        <assign variable="k" expression="k+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="b&gt;1">
+                    <then>
+                        <assign variable="i" expression="i-b"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="k-1" direction="inc" step="1">
+                <output expression="&quot;THE INDEX VALUE IN THE SORTED ARRAY WHOSE EQULVALENT NUMBER CAN BE A SIDE OF RECTANGLE&quot;&amp;&quot; &quot;&amp;icount[i]"/>
+            </for>
+            <if expression="k&gt;1">
+                <then>
+                    <declare name="ab" type="Integer" array="True" size="k"/>
+                    <for variable="i" start="0" end="k-1" direction="inc" step="1">
+                        <assign variable="ab[i]" expression="a[icount[i]]"/>
+                    </for>
+                    <declare name="area" type="Integer" array="False" size=""/>
+                    <assign variable="area" expression="ab[0]*ab[1]"/>
+                    <output expression="&quot;THE MAXIMUM AREA OF RECTANGLE IS:&quot;&amp;&quot; &quot;&amp;area"/>
+                </then>
+                <else>
+                    <output expression="&quot;NO RECTANGLE POSSIBLE&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

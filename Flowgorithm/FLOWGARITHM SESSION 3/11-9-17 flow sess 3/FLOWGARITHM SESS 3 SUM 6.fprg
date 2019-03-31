@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-11 11:31:25 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMToyNTozNSBBTTsgMjYzNA=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMTozMToyNSBBTTsgMjYzMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c" type="Integer" array="False" size="" variables="c"/>
+            <declare name="n1" type="Integer" array="False" size="" variables="n1"/>
+            <declare name="n2" type="Integer" array="False" size="" variables="n2"/>
+            <declare name="n3" type="Integer" array="False" size="" variables="n3"/>
+            <declare name="n" type="Integer" array="False" size="" variables="n"/>
+            <declare name="m" type="Integer" array="False" size="" variables="m"/>
+            <declare name="x" type="Integer" array="False" size="" variables="x"/>
+            <input variable="c"/>
+            <if expression="c==1">
+                <then>
+                    <input variable="n1"/>
+                    <input variable="n2"/>
+                    <input variable="n3"/>
+                    <if expression="n1&gt;n2 &amp;&amp; n1&gt;n3">
+                        <then>
+                            <output expression="n1"/>
+                        </then>
+                        <else>
+                            <if expression="n2&gt;n3 &amp;&amp; n2&gt;n1">
+                                <then>
+                                    <output expression="n2"/>
+                                </then>
+                                <else>
+                                    <output expression="n3"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="c==2">
+                        <then>
+                            <input variable="n"/>
+                            <input variable="m"/>
+                            <assign variable="x" expression="m^n"/>
+                            <output expression="x"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;INVALID CHOICE(WARNING)&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

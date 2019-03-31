@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Pavan Vadde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-02 04:38:33 PM"/>
+        <attribute name="created" value="dGFudHI7IExBUFRPUC1GNEdHMUgzQjsgMjAxNy0xMC0wMjsgMDE6MTE6NTYgUE07IDI5MzE="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMjsgMDQ6Mzg6MzMgUE07IDI5Mjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;ENTER THE NUMBER OF TEST CASES&quot;"/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <input variable="t"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="0"/>
+            <declare name="pr" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="t-1" direction="inc" step="1">
+                <output expression="&quot;ENTER THE SIZE OF NUMBER WHICH YOU WANT&quot;"/>
+                <input variable="n"/>
+                <declare name="a" type="Integer" array="True" size="n"/>
+                <declare name="j" type="Integer" array="False" size=""/>
+                <output expression="&quot;ENTER THE NUMBER DIGIT WISE&quot;"/>
+                <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                    <input variable="a[j]"/>
+                </for>
+                <assign variable="k" expression="n-1"/>
+                <for variable="pr" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="k=a[pr]">
+                        <then>
+                            <for variable="b" start="pr" end="n-1" direction="inc" step="1">
+                                <assign variable="a[b]" expression="a[b+1]"/>
+                                <declare name="ab" type="Integer" array="False" size=""/>
+                                <assign variable="ab" expression="b"/>
+                                <if expression="ab=n-2">
+                                    <then>
+                                        <assign variable="b" expression="n"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </for>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <call expression="sort(a,n)"/>
+                <output expression="a[n-2]"/>
+            </for>
+        </body>
+    </function>
+    <function name="sort" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <for variable="j" start="0" end="n-2" direction="inc" step="1">
+                    <if expression="a[i]&lt;a[j]">
+                        <then>
+                            <assign variable="t" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[i]"/>
+                            <assign variable="a[i]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-14 10:45:17 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY1OyAyMDE3LTA4LTE0OyAxMDozNDoyMiBBTTsgMjUwMQ=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY1OyAyMDE3LTA4LTE0OyAxMDo0NToxNyBBTTsgMjUwNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size="" variables="n"/>
+            <declare name="A" type="Integer" array="False" size="" variables="A"/>
+            <declare name="B" type="Integer" array="False" size="" variables="B"/>
+            <declare name="C" type="Integer" array="False" size="" variables="C"/>
+            <input variable="A"/>
+            <input variable="B"/>
+            <input variable="n"/>
+            <output expression="A"/>
+            <output expression="B"/>
+            <while expression="n&gt;0">
+                <assign variable="C" expression="A+B"/>
+                <assign variable="A" expression="B"/>
+                <assign variable="B" expression="C"/>
+                <output expression="C"/>
+                <assign variable="n" expression="n-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

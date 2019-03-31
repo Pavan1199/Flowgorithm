@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 03:33:45 PM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAwMzoyMjoxMSBQTTsgMjUxNw=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAwMzozMzo0NSBQTTsgMjUyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1" type="Integer" array="False" size="" variables="N1"/>
+            <declare name="N2" type="Integer" array="False" size="" variables="N2"/>
+            <declare name="N3" type="Integer" array="False" size="" variables="N3"/>
+            <declare name="N4" type="Integer" array="False" size="" variables="N4"/>
+            <declare name="N5" type="Integer" array="False" size="" variables="N5"/>
+            <declare name="A" type="Integer" array="False" size="" variables="A"/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <input variable="N3"/>
+            <input variable="N4"/>
+            <input variable="N5"/>
+            <assign variable="A" expression="(N1+N2+N3+N4+N5)/5"/>
+            <if expression="A&gt;90">
+                <then>
+                    <output expression="&quot;GRADE=&quot;&amp; &quot;A+&quot;"/>
+                </then>
+                <else>
+                    <if expression="A&gt;80">
+                        <then>
+                            <output expression="&quot;GRADE=&quot; &amp; &quot;A&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="A&gt;70">
+                                <then>
+                                    <output expression="&quot;GRADE&quot; &amp;&quot;B&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="A&gt;60">
+                                        <then>
+                                            <output expression="&quot;GRADE=&quot; &amp; &quot;C&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="A&gt;50">
+                                                <then>
+                                                    <output expression="&quot;GRADE=&quot; &amp; &quot;D&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;GRADE=&quot; &amp; &quot;F&quot;"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

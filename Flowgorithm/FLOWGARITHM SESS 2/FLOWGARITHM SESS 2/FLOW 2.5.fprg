@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-16 06:10:29 PM"/>
+        <attribute name="created" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE1OyAxMToxOToyOSBBTTsgNDAxNQ=="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE2OyAwNjoxMDoyOSBQTTsgNDAyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="H" type="Real" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="H" expression="0"/>
+            <assign variable="x" expression="1"/>
+            <input variable="n"/>
+            <while expression="x&lt;=n">
+                <assign variable="H" expression="H+(1/x)"/>
+                <assign variable="x" expression="x+1"/>
+            </while>
+            <output expression="&quot;HARMONIC SERIES =&quot;&amp;H"/>
+        </body>
+    </function>
+</flowgorithm>

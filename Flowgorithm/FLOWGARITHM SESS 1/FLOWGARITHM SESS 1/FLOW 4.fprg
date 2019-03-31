@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 10:39:46 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDozNzoxMCBBTTsgMjUwNQ=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDozOTo0NiBBTTsgMjUxNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1" type="Integer" array="False" size="" variables="N1"/>
+            <declare name="N2" type="Integer" array="False" size="" variables="N2"/>
+            <declare name="L" type="Integer" array="False" size="" variables="L"/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <if expression="N1&gt;N2">
+                <then>
+                    <output expression="N1"/>
+                </then>
+                <else>
+                    <output expression="N2"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

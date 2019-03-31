@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Pavan Vadde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-02 04:37:32 PM"/>
+        <attribute name="created" value="dTRlY2UxNzE1ODsgMTBDUFUwMDE1OyAyMDE3LTA5LTI1OyAwMjo0ODozNCBQTTsgMjY0Ng=="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0wMjsgMDQ6Mzc6MzIgUE07IDI5MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;ENTER THE SIZE OF THE ARRAY&quot;"/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <output expression="&quot;ENTER&quot;&amp;&quot; &quot;&amp;N&amp;&quot; &quot;&amp;&quot;NUMBERS&quot;"/>
+            <declare name="X" type="Integer" array="True" size="N"/>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <for variable="I" start="0" end="N-1" direction="inc" step="1">
+                <input variable="X[I]"/>
+            </for>
+            <output expression="&quot;ENTER 2 LIMITS BETWEEN WHICH YOU WANT TO CALCULATE THE SUM&quot;"/>
+            <output expression="&quot;ENTER 1ST NUMBER SMALLER THAN THE 2ND ONE&quot;"/>
+            <declare name="N1" type="Integer" array="False" size=""/>
+            <input variable="N1"/>
+            <declare name="N2" type="Integer" array="False" size=""/>
+            <input variable="N2"/>
+            <declare name="SUM" type="Integer" array="False" size=""/>
+            <assign variable="SUM" expression="0"/>
+            <for variable="I" start="N1" end="N2" direction="inc" step="1">
+                <assign variable="SUM" expression="SUM+X[I]"/>
+            </for>
+            <output expression="&quot;THE SUM IS&quot;&amp;&quot; &quot;&amp;SUM"/>
+        </body>
+    </function>
+</flowgorithm>

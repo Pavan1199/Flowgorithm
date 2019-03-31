@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-14 10:17:28 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0xNDsgMDk6MDg6MzAgUE07IDI5MzA="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0xNDsgMTA6MTc6MjggUE07IDI5Mjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="7"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <input variable="k"/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <if expression="a[i]+a[6-j]&gt;k">
+                    <then>
+                        <assign variable="j" expression="j+1"/>
+                    </then>
+                    <else>
+                        <if expression="a[i]+a[5-j]&lt;k">
+                            <then/>
+                            <else>
+                                <output expression="a[i] &amp;a[5-j]"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

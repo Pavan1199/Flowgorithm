@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-15 10:51:31 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY1OyAyMDE3LTA4LTE0OyAxMDo0NTozNSBBTTsgMjUwNw=="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE1OyAxMDo1MTozMSBBTTsgNDAwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <assign variable="m" expression="0"/>
+            <assign variable="c" expression="0"/>
+            <input variable="x"/>
+            <input variable="n"/>
+            <while expression="m&lt;=n">
+                <assign variable="c" expression="c+x^(m)"/>
+                <assign variable="m" expression="m+1"/>
+            </while>
+            <output expression="&quot;SUM OF THE SERIES=&quot;&amp;c"/>
+        </body>
+    </function>
+</flowgorithm>

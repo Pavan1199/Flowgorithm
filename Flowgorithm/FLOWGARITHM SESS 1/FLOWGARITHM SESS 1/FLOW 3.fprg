@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 10:44:09 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDoyODoyMyBBTTsgMjUwOQ=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDo0NDowOSBBTTsgMjUxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1" type="Integer" array="False" size="" variables="N1"/>
+            <declare name="N2" type="Integer" array="False" size="" variables="N2"/>
+            <declare name="P" type="Integer" array="False" size="" variables="P"/>
+            <declare name="D" type="Integer" array="False" size="" variables="D"/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <assign variable="P" expression="N1*N2"/>
+            <assign variable="D" expression="N1-N2"/>
+            <output expression="&quot;PRODUCT &quot;&amp;P"/>
+            <output expression="&quot;DIFFERENCE &quot;&amp;D"/>
+        </body>
+    </function>
+</flowgorithm>

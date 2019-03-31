@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-25 06:50:45 PM"/>
+        <attribute name="created" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDY6MzA6MDggUE07IDI5Mjk="/>
+        <attribute name="edited" value="YWRtaW47IERFU0tUT1AtMzRJM0pNSDsgMjAxNy0xMC0yNTsgMDY6NTA6NDUgUE07IDI5MzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <call expression="factorial(n)"/>
+        </body>
+    </function>
+    <function name="factorial" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <assign variable="f" expression="1"/>
+            <while expression="x &gt; 0">
+                <assign variable="f" expression="f * x"/>
+                <assign variable="x" expression="x - 1"/>
+            </while>
+            <output expression="f"/>
+        </body>
+    </function>
+</flowgorithm>

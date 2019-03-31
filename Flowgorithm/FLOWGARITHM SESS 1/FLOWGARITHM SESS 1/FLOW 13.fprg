@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 04:41:46 PM"/>
+        <attribute name="created" value="VTRFQ0UxNzAwNzsgMTVDUFUwMDY5OyAyMDE3LTA4LTA3OyAwMzoyMzowMCBQTTsgMjUxMQ=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAwNDo0MTo0NiBQTTsgMjUyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="String" array="False" size="" variables="A"/>
+            <input variable="A"/>
+            <declare name="SAL" type="Integer" array="False" size="" variables="SAL"/>
+            <input variable="SAL"/>
+            <declare name="E" type="Real" array="False" size="" variables="E"/>
+            <declare name="R" type="Real" array="False" size="" variables="R"/>
+            <declare name="Q" type="Real" array="False" size="" variables="Q"/>
+            <declare name="F" type="Real" array="False" size="" variables="F"/>
+            <declare name="D" type="Real" array="False" size="" variables="D"/>
+            <declare name="N" type="Real" array="False" size="" variables="N"/>
+            <if expression="SAL&gt;80000">
+                <then>
+                    <assign variable="E" expression="(SAL*15)/100"/>
+                    <output expression="&quot;BONUS=&quot; &amp; E"/>
+                </then>
+                <else>
+                    <if expression="SAL&gt;=60000&amp;&amp;SAL&lt;=80000">
+                        <then>
+                            <assign variable="R" expression="(SAL*12)/100"/>
+                            <output expression="&quot;BONUS=&quot; &amp; R"/>
+                        </then>
+                        <else>
+                            <if expression="SAL&gt;=50000&amp;&amp;SAL&lt;=60000">
+                                <then>
+                                    <assign variable="Q" expression="(SAL*10)/100"/>
+                                    <output expression="&quot;BONUS=&quot; &amp; Q"/>
+                                </then>
+                                <else>
+                                    <if expression="SAL&gt;=40000&amp;&amp;SAL&lt;=50000">
+                                        <then>
+                                            <assign variable="F" expression="(SAL*7)/100"/>
+                                            <output expression="&quot;BONUS=&quot; &amp; F"/>
+                                        </then>
+                                        <else>
+                                            <if expression="SAL&gt;=30000&amp;&amp;SAL&lt;=40000">
+                                                <then>
+                                                    <assign variable="D" expression="(SAL*5)/100"/>
+                                                    <output expression="&quot;BONUS=&quot; &amp; D"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="N" expression="(SAL*3)/100"/>
+                                                    <output expression="&quot;BONUS=&quot; &amp; N"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

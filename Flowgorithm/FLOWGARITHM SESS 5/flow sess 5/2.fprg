@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-25 11:10:17 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTI1OyAxMDozMjo0NyBBTTsgMjYzOQ=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTI1OyAxMToxMDoxNyBBTTsgMjYzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="Integer" array="False" size="" variables="s"/>
+            <declare name="n" type="Integer" array="False" size="" variables="n"/>
+            <output expression="&quot;Enter n&quot;"/>
+            <input variable="n"/>
+            <output expression="&quot;Enter the array&quot;"/>
+            <declare name="a" type="Integer" array="True" size="n" variables="a[n]"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="j" type="Integer" array="False" size="" variables="j"/>
+            <declare name="t" type="Integer" array="False" size="" variables="t"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter i&quot;"/>
+            <input variable="i"/>
+            <output expression="&quot;Enter j&quot;"/>
+            <input variable="j"/>
+            <assign variable="s" expression="0"/>
+            <if expression="j&lt;=n-1">
+                <then>
+                    <for variable="i" start="i" end="j" direction="inc" step="1">
+                        <assign variable="s" expression="s+a[i]"/>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;Enter j less than n&quot;"/>
+                </else>
+            </if>
+            <output expression="&quot;Sum of the numbers between these indices=&quot; &amp; s"/>
+        </body>
+    </function>
+</flowgorithm>

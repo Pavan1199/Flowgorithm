@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-11 10:39:10 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMDoxOToyNiBBTTsgMjYzNg=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMDozOToxMCBBTTsgMjYzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p" type="Integer" array="False" size="" variables="p"/>
+            <declare name="d" type="Real" array="False" size="" variables="d"/>
+            <declare name="x" type="Real" array="False" size="" variables="x"/>
+            <output expression="&quot;Enter price of mobile&quot;"/>
+            <input variable="p"/>
+            <if expression="p&gt;45000">
+                <then>
+                    <assign variable="d" expression="0.2"/>
+                    <assign variable="x" expression="p*d"/>
+                    <output expression="&quot;Amount he saved=&quot; &amp; x"/>
+                </then>
+                <else>
+                    <if expression="p&gt;35000">
+                        <then>
+                            <assign variable="d" expression="0.15"/>
+                            <assign variable="x" expression="p*d"/>
+                            <output expression="&quot;AMOUNT HE SAVED=&quot; &amp; x"/>
+                        </then>
+                        <else>
+                            <if expression="p&gt;25000">
+                                <then>
+                                    <assign variable="d" expression="0.1"/>
+                                    <assign variable="x" expression="p*d"/>
+                                    <output expression="&quot;AMOUNT HE SAVED=&quot; &amp; x"/>
+                                </then>
+                                <else>
+                                    <assign variable="d" expression="0.05"/>
+                                    <assign variable="x" expression="p*d"/>
+                                    <output expression="&quot;AMOUNT HE SAVED=&quot; &amp; x"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

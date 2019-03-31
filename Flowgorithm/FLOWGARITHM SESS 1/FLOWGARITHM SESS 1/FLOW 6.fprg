@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 10:43:09 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDozOTo1MCBBTTsgMjUxMQ=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDo0MzowOSBBTTsgMjUxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="r" type="Integer" array="False" size="" variables="r"/>
+            <declare name="A" type="Integer" array="False" size="" variables="A"/>
+            <input variable="r"/>
+            <assign variable="A" expression="3.14*r*r"/>
+            <output expression="&quot;AREA &quot;&amp;A"/>
+        </body>
+    </function>
+</flowgorithm>

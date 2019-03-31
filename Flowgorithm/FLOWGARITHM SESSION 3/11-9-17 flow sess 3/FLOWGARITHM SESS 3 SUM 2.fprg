@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="u4ece17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-11 11:50:12 AM"/>
+        <attribute name="created" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMDozNDo0NyBBTTsgMjYzNg=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA5LTExOyAxMTo1MDoxMiBBTTsgMjYyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c1" type="String" array="False" size="" variables="c1"/>
+            <declare name="c2" type="String" array="False" size="" variables="c2"/>
+            <declare name="blue" type="String" array="False" size="" variables="blue"/>
+            <declare name="red" type="String" array="False" size="" variables="red"/>
+            <declare name="green" type="String" array="False" size="" variables="green"/>
+            <declare name="white" type="String" array="False" size="" variables="white"/>
+            <declare name="black" type="String" array="False" size="" variables="black"/>
+            <input variable="c1"/>
+            <input variable="c2"/>
+            <if expression="c1=&quot;red&quot; &amp;&amp; c2=&quot;green&quot;">
+                <then>
+                    <output expression="&quot;Value of product = 80 &quot;"/>
+                </then>
+                <else>
+                    <if expression="c1=&quot;green&quot; &amp;&amp; c2=&quot;blue&quot;">
+                        <then>
+                            <output expression="&quot;Value of product = 75&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="c1=&quot;white&quot; &amp;&amp; c2=&quot;black&quot;">
+                                <then>
+                                    <output expression="&quot;Value of product = 100&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="c1=&quot;blue&quot; &amp;&amp; c2=&quot;white&quot;">
+                                        <then>
+                                            <output expression="&quot;Value of product = 60&quot;"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;INVALID COLOUR CODE&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

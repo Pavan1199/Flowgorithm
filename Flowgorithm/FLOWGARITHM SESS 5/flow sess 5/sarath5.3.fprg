@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MY PC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-30 11:18:02 PM"/>
+        <attribute name="created" value="TVkgUEM7IERFU0tUT1AtVTFGQU5GMzsgMjAxNy0wOS0yNjsgMDk6NTM6NDkgUE07IDI3OTM="/>
+        <attribute name="edited" value="SHA7IExBUFRPUC1WVTg5NDlOVDsgMjAxNy0wOS0zMDsgMTE6MTg6MDIgUE07IDI2MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the array size&quot;"/>
+            <input variable="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="cnt" type="Integer" array="False" size=""/>
+            <assign variable="cnt" expression="0"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <output expression="&quot;Enter the array elements &quot;"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="a[i]==a[j]">
+                        <then>
+                            <assign variable="x[cnt]" expression="a[i]"/>
+                            <assign variable="cnt" expression="cnt+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <if expression="cnt&gt;=2">
+                <then>
+                    <declare name="temp" type="Integer" array="False" size=""/>
+                    <for variable="i" start="1" end="cnt-1" direction="inc" step="1">
+                        <for variable="j" start="i" end="1" direction="dec" step="1">
+                            <if expression="x[j]&lt;x[j-1]">
+                                <then>
+                                    <assign variable="temp" expression="x[j]"/>
+                                    <assign variable="x[j]" expression="x[j-1]"/>
+                                    <assign variable="x[j-1]" expression="temp"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                    </for>
+                    <output expression="&quot;The maximum possible area of the rectangle is &quot;&amp;x[cnt-1]&amp;&quot; * &quot;&amp;x[cnt-2]&amp;&quot; = &quot;&amp;x[cnt-1]*x[cnt-2]"/>
+                </then>
+                <else>
+                    <output expression="&quot;Rectangle cannot be formed since there are no two equal sides&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

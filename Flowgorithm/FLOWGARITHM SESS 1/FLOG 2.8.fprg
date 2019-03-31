@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="santosh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-28 10:44:09 AM"/>
+        <attribute name="created" value="c2FudG9zaDsgTEFQVE9QLVQwRUkxVVRHOyAyMDE3LTA4LTI4OyAxMDowOToxOCBBTTsgMzIxMg=="/>
+        <attribute name="edited" value="c2FudG9zaDsgTEFQVE9QLVQwRUkxVVRHOyAyMDE3LTA4LTI4OyAxMDo0NDowOSBBTTsgMzIxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <if expression="n&gt;99">
+                <then>
+                    <declare name="s" type="Integer" array="False" size=""/>
+                    <assign variable="s" expression="n"/>
+                    <declare name="e" type="Integer" array="False" size=""/>
+                    <declare name="n1" type="Integer" array="False" size=""/>
+                    <assign variable="n1" expression="1"/>
+                    <declare name="n2" type="Integer" array="False" size=""/>
+                    <assign variable="n2" expression="0"/>
+                    <declare name="F1" type="Integer" array="False" size=""/>
+                    <assign variable="F1" expression="s%2"/>
+                    <if expression="F1=0">
+                        <then>
+                            <while expression="n&gt;0">
+                                <assign variable="s" expression="n%10"/>
+                                <if expression="(s%2)=0">
+                                    <then>
+                                        <assign variable="n1" expression="n1*s"/>
+                                        <assign variable="n" expression="n/10"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="n" expression="n/10"/>
+                                    </else>
+                                </if>
+                            </while>
+                            <output expression="&quot;THE GIVEN NUMBER IS EVEN,SO PRODUCT OF EVEN DIGITS IS&quot;&amp;&quot; &quot;&amp;n1"/>
+                        </then>
+                        <else>
+                            <while expression="n&gt;0">
+                                <assign variable="s" expression="n%10"/>
+                                <if expression="(s%2)=0">
+                                    <then>
+                                        <assign variable="n" expression="n/10"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="n2" expression="n2+s"/>
+                                        <assign variable="n" expression="n/10"/>
+                                    </else>
+                                </if>
+                            </while>
+                            <output expression="&quot;THE GIVEN NUMBER IS ODD,SO SUM OF ODD DIGITS IS&quot;&amp;&quot; &quot;&amp;n2"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;ENTER A 3-DIGIT NUMBER&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

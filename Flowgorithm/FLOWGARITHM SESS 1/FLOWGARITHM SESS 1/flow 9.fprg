@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-07 11:47:40 AM"/>
+        <attribute name="created" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMDo1MjozMyBBTTsgMjUwNw=="/>
+        <attribute name="edited" value="VTRFQ0UxNzA1OTsgMTVDUFUwMDY3OyAyMDE3LTA4LTA3OyAxMTo0Nzo0MCBBTTsgMjUxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1" type="Real" array="False" size="" variables="x1"/>
+            <declare name="a" type="Integer" array="False" size="" variables="a"/>
+            <declare name="b" type="Integer" array="False" size="" variables="b"/>
+            <declare name="c" type="Integer" array="False" size="" variables="c"/>
+            <declare name="x2" type="Real" array="False" size="" variables="x2"/>
+            <declare name="D1" type="Real" array="False" size="" variables="D1"/>
+            <declare name="D2" type="Real" array="False" size="" variables="D2"/>
+            <declare name="D3" type="Real" array="False" size="" variables="D3"/>
+            <declare name="D4" type="Real" array="False" size="" variables="D4"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="D1" expression="(b^2-4*a*c)^(1/2)"/>
+            <assign variable="D2" expression="-b+D1"/>
+            <assign variable="x1" expression="D2/(2*a)"/>
+            <assign variable="D4" expression="-b-D1"/>
+            <assign variable="x2" expression="D4/(2*a)"/>
+            <output expression="&quot;Roots of the equation ax^2+bx+c=0 are&quot;&amp; x1 &amp; &quot;and&quot; &amp; x2"/>
+        </body>
+    </function>
+</flowgorithm>

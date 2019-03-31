@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-26 03:40:41 PM"/>
+        <attribute name="created" value="dTRlY2UxNzE1ODsgMTBDUFUwMDE1OyAyMDE3LTA5LTI1OyAwMToyMDo1NyBQTTsgMjY0MA=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDU5OyAyMDE3LTA5LTI2OyAwMzo0MDo0MSBQTTsgMjY1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="True" size="10" variables="x[10]"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <output expression="&quot;Enter Array of size 10&quot;"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="x[i]"/>
+            </for>
+            <output expression="&quot;CHOOSE ONE OPTION FROM BELOW:&quot;"/>
+            <output expression="&quot;NUMBER OF EVEN NUMBERS-1.&quot;"/>
+            <output expression="&quot;NUMBER OF ODD NUMBERS-2.&quot;"/>
+            <output expression="&quot;SUM OF ELEMENTS IN EVEN INDICES-3.&quot;"/>
+            <output expression="&quot;SUM OF ELEMENTS IN ODD INDICES-4.&quot;"/>
+            <output expression="&quot;LARGEST EVEN NUMBER IN THE ARRAY-5.&quot;"/>
+            <output expression="&quot;SMALLEST ODD NUMBER IN THE ARRAY-6.&quot;"/>
+            <declare name="ch" type="Integer" array="False" size="" variables="ch"/>
+            <input variable="ch"/>
+            <declare name="j" type="Integer" array="False" size="" variables="j"/>
+            <declare name="m" type="Integer" array="False" size="" variables="m"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <for variable="j" start="i+1" end="9" direction="inc" step="1">
+                    <if expression="x[i]&gt;x[j]">
+                        <then>
+                            <assign variable="m" expression="x[j]"/>
+                            <assign variable="x[j]" expression="x[i]"/>
+                            <assign variable="x[i]" expression="m"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <if expression="ch=1">
+                <then>
+                    <call expression="even(x)"/>
+                </then>
+                <else>
+                    <if expression="ch=2">
+                        <then>
+                            <call expression="odd(x)"/>
+                        </then>
+                        <else>
+                            <if expression="ch=3">
+                                <then>
+                                    <call expression="seindex(x)"/>
+                                </then>
+                                <else>
+                                    <if expression="ch=4">
+                                        <then>
+                                            <call expression="soindex(x)"/>
+                                        </then>
+                                        <else>
+                                            <if expression="ch=5">
+                                                <then>
+                                                    <call expression="largee(x)"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="ch=6">
+                                                        <then>
+                                                            <call expression="smallo(x)"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;ENTER A VALID OPTION&quot;"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="even" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="o" type="Integer" array="False" size="" variables="o"/>
+            <assign variable="o" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="(x[i])%2=0">
+                    <then>
+                        <assign variable="o" expression="o+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE NUMBER OF EVEN NUMBERS IS&quot;&amp;&quot; &quot;&amp;o"/>
+        </body>
+    </function>
+    <function name="largee" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <for variable="i" start="9" end="0" direction="dec" step="1">
+                <if expression="x[i]%2=0">
+                    <then>
+                        <output expression="&quot;THE GREATEST EVEN NUMBER IS&quot;&amp;&quot; &quot;&amp;x[i]"/>
+                        <assign variable="i" expression="-1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="odd" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="r" type="Integer" array="False" size="" variables="r"/>
+            <assign variable="r" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="(x[i])%2=1">
+                    <then>
+                        <assign variable="r" expression="r+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE NUMBER OF ODD NUMBERS IS&quot;&amp;&quot; &quot;&amp;r"/>
+        </body>
+    </function>
+    <function name="seindex" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="sume" type="Integer" array="False" size="" variables="sume"/>
+            <assign variable="sume" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="i%2=0">
+                    <then>
+                        <assign variable="sume" expression="sume+x[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE SUM OF ELEMENTS IN EVEN INDICES IS&quot;&amp;&quot; &quot;&amp;sume"/>
+        </body>
+    </function>
+    <function name="smallo" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="x[i]%2=1">
+                    <then>
+                        <output expression="&quot;THE SMALLEST ODD NUMBER IS&quot;&amp;&quot; &quot;&amp;x[i]"/>
+                        <assign variable="i" expression="9"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="soindex" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="sumo" type="Integer" array="False" size="" variables="sumo"/>
+            <assign variable="sumo" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="i%2=1">
+                    <then>
+                        <assign variable="sumo" expression="sumo+x[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE SUM OF ELEMENTS IN ODD INDICES IS&quot;&amp;&quot; &quot;&amp;sumo"/>
+        </body>
+    </function>
+</flowgorithm>

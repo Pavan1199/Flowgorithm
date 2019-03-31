@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-16 06:11:30 PM"/>
+        <attribute name="created" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE2OyAwNTo0MjoyMyBQTTsgNDAyNA=="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE2OyAwNjoxMTozMCBQTTsgNDAxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="p" expression="n"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <if expression="n&gt;9">
+                <then>
+                    <while expression="n&gt;0">
+                        <assign variable="c" expression="n%10"/>
+                        <assign variable="x" expression="(x*10)+c"/>
+                        <assign variable="n" expression="n/10"/>
+                    </while>
+                    <if expression="x=p">
+                        <then>
+                            <output expression="&quot;GIVEN NUMBER IS PALINDROME&quot;"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;GIVEN NUMBER IS NOT PALINDROME&quot;"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;NUMBER SHOULD BE TWO OR MORE DIGITS&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

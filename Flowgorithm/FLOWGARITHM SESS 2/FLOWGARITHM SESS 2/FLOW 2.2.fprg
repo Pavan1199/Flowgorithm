@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="U4ECE17059"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-08-16 06:10:07 PM"/>
+        <attribute name="created" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE1OyAxMTowNjozMyBBTTsgNDAwNg=="/>
+        <attribute name="edited" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA4LTE2OyAwNjoxMDowNyBQTTsgNDAyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <assign variable="m" expression="2"/>
+            <assign variable="c" expression="0"/>
+            <input variable="x"/>
+            <input variable="n"/>
+            <if expression="n%2=0">
+                <then>
+                    <while expression="m&lt;=n">
+                        <assign variable="c" expression="c+x^(m)"/>
+                        <assign variable="m" expression="m+2"/>
+                    </while>
+                    <output expression="&quot;THE SUM OF THE SERIES=&quot;&amp;c"/>
+                </then>
+                <else>
+                    <output expression="&quot;INPUT AN EVEN NUMBER FOR n&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

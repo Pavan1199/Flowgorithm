@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-26 03:48:35 PM"/>
+        <attribute name="created" value="TmFnYXNhaSBDaG93ZGFyeTsgREVTS1RPUC1NVUFPRTdJOyAyMDE3LTA5LTIxOyAwOTo1MzozOCBBTTsgNDAxOA=="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDU5OyAyMDE3LTA5LTI2OyAwMzo0ODozNSBQTTsgMjY2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="True" size="5" variables="n[5]"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <output expression="&quot;Input the array&quot;"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="n[i]"/>
+            </for>
+            <declare name="j" type="Integer" array="False" size="" variables="j"/>
+            <declare name="t" type="Integer" array="False" size="" variables="t"/>
+            <for variable="i" start="1" end="4" direction="inc" step="1">
+                <for variable="j" start="i" end="1" direction="dec" step="1">
+                    <if expression="n[j-1]&gt;n[j]">
+                        <then>
+                            <assign variable="t" expression="n[j-1]"/>
+                            <assign variable="n[j-1]" expression="n[j]"/>
+                            <assign variable="n[j]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="n[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

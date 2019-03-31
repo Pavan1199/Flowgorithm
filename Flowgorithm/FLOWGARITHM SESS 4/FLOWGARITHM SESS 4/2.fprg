@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-17 03:10:50 PM"/>
+        <attribute name="created" value="Q09BU1RBTDsgQ09BU1RBTC1QQzsgMjAxNy0wOS0xNzsgMDM6MDM6MDMgUE07IDI2MDY="/>
+        <attribute name="edited" value="Q09BU1RBTDsgQ09BU1RBTC1QQzsgMjAxNy0wOS0xNzsgMDM6MTA6NTAgUE07IDI2MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <for variable="j" start="0" end="3-i" direction="inc" step="1">
+                    <if expression="a[j]&gt;a[j+1]">
+                        <then>
+                            <assign variable="t" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Largest Number=&quot;&amp; a[4]"/>
+            <output expression="&quot;Smallest number=&quot;&amp; a[0]"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="COASTAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-26 03:20:32 PM"/>
+        <attribute name="created" value="Q09BU1RBTDsgQ09BU1RBTC1QQzsgMjAxNy0wOS0xNzsgMDM6MjU6MDIgUE07IDI2MDk="/>
+        <attribute name="edited" value="dTRlY2UxNzA1OTsgMTVDUFUwMDU5OyAyMDE3LTA5LTI2OyAwMzoyMDozMiBQTTsgMjY0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="8" variables="a[8]"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="n" type="Integer" array="False" size="" variables="n"/>
+            <declare name="cnt" type="Integer" array="False" size="" variables="cnt"/>
+            <output expression="&quot;Enter the array of size 8&quot;"/>
+            <for variable="i" start="0" end="7" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter 'n'&quot;"/>
+            <input variable="n"/>
+            <assign variable="cnt" expression="0"/>
+            <for variable="i" start="0" end="7" direction="inc" step="1">
+                <if expression="n=a[i]">
+                    <then>
+                        <assign variable="cnt" expression="cnt+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="cnt=0">
+                <then>
+                    <output expression="&quot;Key is not present in the array&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;Key is present in the array&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
